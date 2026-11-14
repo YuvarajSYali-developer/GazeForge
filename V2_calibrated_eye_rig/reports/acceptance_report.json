@@ -1,0 +1,388 @@
+{
+ "passed": 9,
+ "total": 9,
+ "checks_passed": 63,
+ "checks_total": 63,
+ "runtime_s": 26.53,
+ "blender_version": "4.2.23 LTS",
+ "tests": [
+  {
+   "id": "A",
+   "title": "Scene integrity (saved scene.blend)",
+   "checks": [
+    {
+     "check": "scene.blend opens",
+     "pass": true,
+     "detail": "scene.blend"
+    },
+    {
+     "check": "required objects exist",
+     "pass": true,
+     "detail": "missing=[]"
+    },
+    {
+     "check": "eye bones eye.L / eye.R (+ head) exist",
+     "pass": true,
+     "detail": "['eye.L', 'eye.R', 'head']"
+    },
+    {
+     "check": "calibration stored in scene",
+     "pass": true,
+     "detail": ""
+    },
+    {
+     "check": "scene camera is RenderCamera",
+     "pass": true,
+     "detail": ""
+    },
+    {
+     "check": "all textures packed into .blend",
+     "pass": true,
+     "detail": "7 images, unpacked=[]"
+    },
+    {
+     "check": "textures load with real content (non-constant)",
+     "pass": true,
+     "detail": "{'Face_Albedo': 0.1585, 'Face_HairMask': 0.4291, 'Iris_L_Albedo': 0.092, 'Iris_L_Height': 0.1021, 'Iris_R_Albedo': 0.0917, 'Iris_R_Height': 0.0995, 'Sclera_Albedo': 0.0737}"
+    },
+    {
+     "check": "face mesh is UV-mapped and image-textured",
+     "pass": true,
+     "detail": "4483 verts"
+    },
+    {
+     "check": "no external library links",
+     "pass": true,
+     "detail": ""
+    }
+   ],
+   "status": "PASS"
+  },
+  {
+   "id": "B",
+   "title": "API integrity",
+   "checks": [
+    {
+     "check": "eyes.move(h, v) works and updates pose",
+     "pass": true,
+     "detail": ""
+    },
+    {
+     "check": "invalid inputs rejected (out of range, NaN, inf, non-numeric, bool)",
+     "pass": true,
+     "detail": "[((1.5, 0), 'ValueError'), ((0, -1.01), 'ValueError'), ((nan, 0), 'ValueError'), ((inf, 0), 'ValueError'), (('x', 0), 'TypeError'), ((None, 0), 'TypeError'), ((True, 0), 'TypeError')]"
+    },
+    {
+     "check": "boundary inputs accepted (+-1)",
+     "pass": true,
+     "detail": ""
+    },
+    {
+     "check": "reset() repeatable (5x identical quaternions)",
+     "pass": true,
+     "detail": ""
+    },
+    {
+     "check": "eyes.render() writes a 1024x1024 PNG and returns its path",
+     "pass": true,
+     "detail": "<tmp>/api_probe.png (1024, 1024, 3)"
+    },
+    {
+     "check": "module-level API eyes.move/reset/render/metadata exists",
+     "pass": true,
+     "detail": ""
+    },
+    {
+     "check": "no GUI needed (running in background mode)",
+     "pass": true,
+     "detail": ""
+    }
+   ],
+   "status": "PASS"
+  },
+  {
+   "id": "C",
+   "title": "Anatomical articulation",
+   "checks": [
+    {
+     "check": "eyeball centres never translate (25-pose grid)",
+     "pass": true,
+     "detail": "max 0.00e+00 m"
+    },
+    {
+     "check": "eyeball scale preserved",
+     "pass": true,
+     "detail": "max |s-1| 5.96e-08"
+    },
+    {
+     "check": "iris/pupil/cornea rigidly attached (local transforms unchanged)",
+     "pass": true,
+     "detail": "1.8e-07"
+    },
+    {
+     "check": "pupil stays on the eyeball radius (rotation about own centre)",
+     "pass": true,
+     "detail": "1.04e-08 m"
+    },
+    {
+     "check": "head/face does not move or deform",
+     "pass": true,
+     "detail": ""
+    },
+    {
+     "check": "eye assemblies parented to eye bones",
+     "pass": true,
+     "detail": ""
+    }
+   ],
+   "status": "PASS"
+  },
+  {
+   "id": "D",
+   "title": "Binocular fixation convergence",
+   "checks": [
+    {
+     "check": "nominal fixation 35 cm forward of the eye midpoint",
+     "pass": true,
+     "detail": "0.349999993 m"
+    },
+    {
+     "check": "both gaze rays pass through the common target (35 poses)",
+     "pass": true,
+     "detail": "max miss 9.40e-08 m"
+    },
+    {
+     "check": "target displacement within +-5 cm bounds",
+     "pass": true,
+     "detail": "max 0.0500000 m"
+    },
+    {
+     "check": "target stays in the 35 cm fixation plane",
+     "pass": true,
+     "detail": "max off-plane 0.0e+00 m"
+    },
+    {
+     "check": "centre gaze move(0,0) == calibrated neutral (reset)",
+     "pass": true,
+     "detail": ""
+    },
+    {
+     "check": "neutral pose converges (symmetric inward rotation)",
+     "pass": true,
+     "detail": "yaw L -4.791 deg, R 4.791 deg, vergence 9.582 deg"
+    }
+   ],
+   "status": "PASS"
+  },
+  {
+   "id": "E",
+   "title": "Camera calibration",
+   "checks": [
+    {
+     "check": "camera 40 cm forward of the eye midpoint",
+     "pass": true,
+     "detail": "0.4000000 m"
+    },
+    {
+     "check": "camera faces the face (optical axis = -forward)",
+     "pass": true,
+     "detail": "cos = 1.000000000000"
+    },
+    {
+     "check": "optical axis passes through the eye midpoint (projects to image centre)",
+     "pass": true,
+     "detail": "[512.0, 512.0]"
+    },
+    {
+     "check": "resolution 1024x1024 @100 %",
+     "pass": true,
+     "detail": ""
+    },
+    {
+     "check": "camera matrix identical in all 10 frames (camera locked)",
+     "pass": true,
+     "detail": ""
+    },
+    {
+     "check": "lighting/camera/head locks hold",
+     "pass": true,
+     "detail": ""
+    },
+    {
+     "check": "projected pupils agree with pupils detected in the PNGs",
+     "pass": true,
+     "detail": "max 0.260 px, mean 0.107 px over 20 pupils"
+    }
+   ],
+   "status": "PASS"
+  },
+  {
+   "id": "F",
+   "title": "Five-direction validation",
+   "checks": [
+    {
+     "check": "LEFT passes",
+     "pass": true,
+     "detail": "L proj (-6.73,+0.00) R proj (-6.90,+0.00)"
+    },
+    {
+     "check": "RIGHT passes",
+     "pass": true,
+     "detail": "L proj (+6.90,+0.00) R proj (+6.73,+0.00)"
+    },
+    {
+     "check": "UP passes",
+     "pass": true,
+     "detail": "L proj (+0.01,-6.82) R proj (-0.01,-6.82)"
+    },
+    {
+     "check": "DOWN passes",
+     "pass": true,
+     "detail": "L proj (+0.01,+6.82) R proj (-0.01,+6.82)"
+    },
+    {
+     "check": "RESET passes",
+     "pass": true,
+     "detail": ""
+    },
+    {
+     "check": "re-measured from saved PNGs: all 8 pupil shifts have the expected sign and >= 2 px",
+     "pass": true,
+     "detail": "{'left_L': (-6.84, 0.0), 'left_R': (-6.95, 0.0), 'right_L': (6.93, 0.01), 'right_R': (6.81, 0.05), 'up_L': (-0.03, -7.0), 'up_R': (-0.03, -7.05), 'down_L': (-0.07, 6.88), 'down_R': (-0.03, 6.92)}"
+    }
+   ],
+   "status": "PASS"
+  },
+  {
+   "id": "G",
+   "title": "Ten-frame clockwise sequence",
+   "checks": [
+    {
+     "check": "frame_00..frame_09.png exist",
+     "pass": true,
+     "detail": ""
+    },
+    {
+     "check": "all frames 1024x1024",
+     "pass": true,
+     "detail": ""
+    },
+    {
+     "check": "inputs follow theta_k = 2 pi k/10, h = sin, v = cos",
+     "pass": true,
+     "detail": ""
+    },
+    {
+     "check": "frame 0 is the top position (h=0, v=+1)",
+     "pass": true,
+     "detail": ""
+    },
+    {
+     "check": "no two frames identical",
+     "pass": true,
+     "detail": "min pairwise max-diff 149.0/255"
+    },
+    {
+     "check": "pupils in the RENDERED images move clockwise from the top (image-measured angle vs theta_k)",
+     "pass": true,
+     "detail": "max angular error 1.0 deg"
+    },
+    {
+     "check": "contact sheet exists",
+     "pass": true,
+     "detail": ""
+    }
+   ],
+   "status": "PASS"
+  },
+  {
+   "id": "H",
+   "title": "Metadata ground truth",
+   "checks": [
+    {
+     "check": "valid JSON list with 10 records, frames 0..9",
+     "pass": true,
+     "detail": ""
+    },
+    {
+     "check": "required field names present",
+     "pass": true,
+     "detail": ""
+    },
+    {
+     "check": "all numeric values finite",
+     "pass": true,
+     "detail": ""
+    },
+    {
+     "check": "eye rotations match independent shortest-arc re-derivation",
+     "pass": true,
+     "detail": "max matrix diff 1.2e-07"
+    },
+    {
+     "check": "3-D pupil centres match independent re-derivation",
+     "pass": true,
+     "detail": "2.5e-08 m"
+    },
+    {
+     "check": "2-D pupil centres = camera_matrix x independent 3-D pupil",
+     "pass": true,
+     "detail": "1.2e-04 px"
+    },
+    {
+     "check": "camera_matrix equals the live camera projection",
+     "pass": true,
+     "detail": "0.0e+00"
+    },
+    {
+     "check": "ground truth identical to the reference release (preservation check)",
+     "pass": true,
+     "detail": "max |diff| over all frames/fields = 0.0e+00"
+    },
+    {
+     "check": "2-D pupils inside the image",
+     "pass": true,
+     "detail": ""
+    }
+   ],
+   "status": "PASS"
+  },
+  {
+   "id": "I",
+   "title": "Packaging",
+   "checks": [
+    {
+     "check": "submission ZIP found",
+     "pass": true,
+     "detail": "GazeForge.zip"
+    },
+    {
+     "check": "ZIP opens and CRCs verify",
+     "pass": true,
+     "detail": ""
+    },
+    {
+     "check": "required paths at ZIP root (no enclosing folder)",
+     "pass": true,
+     "detail": "missing=[]"
+    },
+    {
+     "check": "packaged wrapper runs headless against packaged scene",
+     "pass": true,
+     "detail": "python eyes.py ... rc=0"
+    },
+    {
+     "check": "packaged run reproduces metadata.json frame 3 pupils",
+     "pass": true,
+     "detail": "0.0e+00 px"
+    },
+    {
+     "check": "packaged scene self-contained (all images packed, no libraries)",
+     "pass": true,
+     "detail": ""
+    }
+   ],
+   "status": "PASS"
+  }
+ ]
+}

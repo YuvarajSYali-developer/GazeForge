@@ -1,0 +1,295 @@
+{
+ "passed": 5,
+ "total": 5,
+ "criteria": {
+  "min_shift_px": 2.0,
+  "max_cross_ratio": 0.5,
+  "measurements": "projected ground truth AND independent image detection must both pass"
+ },
+ "neutral_pupils": {
+  "L": {
+   "projected": [
+    640.83203125,
+    512.0
+   ],
+   "detected": [
+    640.8538983862645,
+    511.975983198167
+   ],
+   "detected_area_px": 229,
+   "roi_radius_px": 25.32046724928289,
+   "pupil_radius_px": 9.034957091626366
+  },
+  "R": {
+   "projected": [
+    383.16796875,
+    512.0
+   ],
+   "detected": [
+    383.1779051055058,
+    511.9682272794895
+   ],
+   "detected_area_px": 235,
+   "roi_radius_px": 25.320467258085017,
+   "pupil_radius_px": 9.03495709476718
+  }
+ },
+ "tests": [
+  {
+   "test": "LEFT",
+   "input": {
+    "h": -1.0,
+    "v": 0.0
+   },
+   "expected_image_direction": {
+    "x": -1,
+    "y": 0,
+    "note": "image y axis points down"
+   },
+   "left_eye": {
+    "projected": {
+     "dx": -6.7311,
+     "dy": 0.0,
+     "along_px": 6.7311,
+     "cross_px": 0.0,
+     "pass": true
+    },
+    "detected": {
+     "dx": -6.8372,
+     "dy": 0.0043,
+     "along_px": 6.8372,
+     "cross_px": 0.0043,
+     "pass": true
+    },
+    "pass": true
+   },
+   "right_eye": {
+    "projected": {
+     "dx": -6.9046,
+     "dy": 0.0,
+     "along_px": 6.9046,
+     "cross_px": 0.0,
+     "pass": true
+    },
+    "detected": {
+     "dx": -6.9549,
+     "dy": 0.0096,
+     "along_px": 6.9549,
+     "cross_px": 0.0096,
+     "pass": true
+    },
+    "pass": true
+   },
+   "static_scene_locked": {
+    "camera_pose_locked": true,
+    "camera_intrinsics_locked": true,
+    "head_locked": true,
+    "resolution_locked": true,
+    "lighting_locked": true,
+    "all": true
+   },
+   "render": "reports/direction_test/left.png",
+   "status": "PASS"
+  },
+  {
+   "test": "RIGHT",
+   "input": {
+    "h": 1.0,
+    "v": 0.0
+   },
+   "expected_image_direction": {
+    "x": 1,
+    "y": 0,
+    "note": "image y axis points down"
+   },
+   "left_eye": {
+    "projected": {
+     "dx": 6.9046,
+     "dy": 0.0,
+     "along_px": 6.9046,
+     "cross_px": 0.0,
+     "pass": true
+    },
+    "detected": {
+     "dx": 6.9314,
+     "dy": 0.0114,
+     "along_px": 6.9314,
+     "cross_px": 0.0114,
+     "pass": true
+    },
+    "pass": true
+   },
+   "right_eye": {
+    "projected": {
+     "dx": 6.731,
+     "dy": 0.0,
+     "along_px": 6.731,
+     "cross_px": 0.0,
+     "pass": true
+    },
+    "detected": {
+     "dx": 6.8074,
+     "dy": 0.0456,
+     "along_px": 6.8074,
+     "cross_px": 0.0456,
+     "pass": true
+    },
+    "pass": true
+   },
+   "static_scene_locked": {
+    "camera_pose_locked": true,
+    "camera_intrinsics_locked": true,
+    "head_locked": true,
+    "resolution_locked": true,
+    "lighting_locked": true,
+    "all": true
+   },
+   "render": "reports/direction_test/right.png",
+   "status": "PASS"
+  },
+  {
+   "test": "UP",
+   "input": {
+    "h": 0.0,
+    "v": 1.0
+   },
+   "expected_image_direction": {
+    "x": 0,
+    "y": -1,
+    "note": "image y axis points down"
+   },
+   "left_eye": {
+    "projected": {
+     "dx": 0.0052,
+     "dy": -6.8224,
+     "along_px": 6.8224,
+     "cross_px": 0.0052,
+     "pass": true
+    },
+    "detected": {
+     "dx": -0.029,
+     "dy": -7.0035,
+     "along_px": 7.0035,
+     "cross_px": 0.029,
+     "pass": true
+    },
+    "pass": true
+   },
+   "right_eye": {
+    "projected": {
+     "dx": -0.0052,
+     "dy": -6.8224,
+     "along_px": 6.8224,
+     "cross_px": 0.0052,
+     "pass": true
+    },
+    "detected": {
+     "dx": -0.0325,
+     "dy": -7.0498,
+     "along_px": 7.0498,
+     "cross_px": 0.0325,
+     "pass": true
+    },
+    "pass": true
+   },
+   "static_scene_locked": {
+    "camera_pose_locked": true,
+    "camera_intrinsics_locked": true,
+    "head_locked": true,
+    "resolution_locked": true,
+    "lighting_locked": true,
+    "all": true
+   },
+   "render": "reports/direction_test/up.png",
+   "status": "PASS"
+  },
+  {
+   "test": "DOWN",
+   "input": {
+    "h": 0.0,
+    "v": -1.0
+   },
+   "expected_image_direction": {
+    "x": 0,
+    "y": 1,
+    "note": "image y axis points down"
+   },
+   "left_eye": {
+    "projected": {
+     "dx": 0.0052,
+     "dy": 6.8224,
+     "along_px": 6.8224,
+     "cross_px": 0.0052,
+     "pass": true
+    },
+    "detected": {
+     "dx": -0.0654,
+     "dy": 6.8848,
+     "along_px": 6.8848,
+     "cross_px": 0.0654,
+     "pass": true
+    },
+    "pass": true
+   },
+   "right_eye": {
+    "projected": {
+     "dx": -0.0052,
+     "dy": 6.8224,
+     "along_px": 6.8224,
+     "cross_px": 0.0052,
+     "pass": true
+    },
+    "detected": {
+     "dx": -0.0327,
+     "dy": 6.9196,
+     "along_px": 6.9196,
+     "cross_px": 0.0327,
+     "pass": true
+    },
+    "pass": true
+   },
+   "static_scene_locked": {
+    "camera_pose_locked": true,
+    "camera_intrinsics_locked": true,
+    "head_locked": true,
+    "resolution_locked": true,
+    "lighting_locked": true,
+    "all": true
+   },
+   "render": "reports/direction_test/down.png",
+   "status": "PASS"
+  },
+  {
+   "test": "RESET",
+   "input": "reset() x3 after move(0.6, -0.8)",
+   "expected_image_direction": "pupils return exactly to the neutral baseline",
+   "left_eye": {
+    "projected_shift_px": 0.0,
+    "detected_shift_px": 0.0,
+    "rotation_diff_rad": 0.0,
+    "pass": true
+   },
+   "right_eye": {
+    "projected_shift_px": 0.0,
+    "detected_shift_px": 0.0,
+    "rotation_diff_rad": 0.0,
+    "pass": true
+   },
+   "pose_quaternion_max_diff_over_3_resets": 0.0,
+   "image_diff_vs_neutral_8bit": {
+    "max": 0.0,
+    "mean": 0.0
+   },
+   "static_scene_locked": {
+    "camera_pose_locked": true,
+    "camera_intrinsics_locked": true,
+    "head_locked": true,
+    "resolution_locked": true,
+    "lighting_locked": true,
+    "all": true
+   },
+   "render": "reports/direction_test/reset.png",
+   "status": "PASS"
+  }
+ ]
+}

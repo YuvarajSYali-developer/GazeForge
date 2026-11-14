@@ -1,0 +1,55 @@
+{
+ "cross_version": [
+  {
+   "blender": "5.0.1",
+   "python": "3.11.18",
+   "replay_max_pupil2D_diff_px": 0.0,
+   "replay_max_rotation_diff_rad": 0.0,
+   "replay_max_camera_matrix_diff": 0.0,
+   "direction_validation": "5/5",
+   "samples": 8,
+   "tests": {
+    "LEFT": "PASS",
+    "RIGHT": "PASS",
+    "UP": "PASS",
+    "DOWN": "PASS",
+    "RESET": "PASS"
+   }
+  },
+  {
+   "blender": "4.5.15 LTS",
+   "python": "3.11.18",
+   "replay_max_pupil2D_diff_px": 0.0,
+   "replay_max_rotation_diff_rad": 0.0,
+   "replay_max_camera_matrix_diff": 0.0,
+   "direction_validation": "5/5",
+   "samples": 8,
+   "tests": {
+    "LEFT": "PASS",
+    "RIGHT": "PASS",
+    "UP": "PASS",
+    "DOWN": "PASS",
+    "RESET": "PASS"
+   }
+  }
+ ],
+ "reproducibility": {
+  "samples": 32,
+  "frames": {
+   "0": {
+    "max_abs_diff_8bit": 0.0,
+    "mean_abs_diff_8bit": 0.0,
+    "identical_pixels": true,
+    "metadata_pupil_diff_px": 0.0,
+    "render_seconds": 49.1
+   },
+   "5": {
+    "max_abs_diff_8bit": 0.0,
+    "mean_abs_diff_8bit": 0.0,
+    "identical_pixels": true,
+    "metadata_pupil_diff_px": 0.0,
+    "render_seconds": 48.0
+   }
+  }
+ }
+}
