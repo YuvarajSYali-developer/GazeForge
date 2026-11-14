@@ -1,0 +1,240 @@
+{
+ "semantic_sources": {
+  "neutral_aperture_mm": {
+   "L": 7.235963478684465,
+   "R": 7.26339507102966
+  },
+  "wink_left": {
+   "L": {
+    "aperture_mm": 0.7259424692355465,
+    "brow_dy_mm": -2.568305736609877
+   },
+   "R": {
+    "aperture_mm": 5.779025800824594,
+    "brow_dy_mm": 0.9415111796761688
+   }
+  },
+  "wink_right": {
+   "L": {
+    "aperture_mm": 5.893031219128597,
+    "brow_dy_mm": 0.2549790388127193
+   },
+   "R": {
+    "aperture_mm": 1.0041060691541592,
+    "brow_dy_mm": -2.7938051354000626
+   }
+  },
+  "surprise": {
+   "L": {
+    "aperture_mm": 7.851660749889633,
+    "brow_dy_mm": 1.9770365473224527
+   },
+   "R": {
+    "aperture_mm": 7.893250310017641,
+    "brow_dy_mm": 1.5372402051901934
+   }
+  },
+  "squint": {
+   "L": {
+    "aperture_mm": 2.6997474795599774,
+    "brow_dy_mm": -2.708830114981131
+   },
+   "R": {
+    "aperture_mm": 2.72015119865604,
+    "brow_dy_mm": -2.968583384143464
+   }
+  },
+  "disgust": {
+   "L": {
+    "aperture_mm": 5.781301134735045,
+    "brow_dy_mm": -1.2357628456374226
+   },
+   "R": {
+    "aperture_mm": 5.71217545707281,
+    "brow_dy_mm": -1.394451762762705
+   }
+  },
+  "happy": {
+   "L": {
+    "aperture_mm": 5.38636467292089,
+    "brow_dy_mm": -0.8511969690454535
+   },
+   "R": {
+    "aperture_mm": 5.5309092972862794,
+    "brow_dy_mm": -0.8717286797588764
+   }
+  },
+  "compress_face": {
+   "L": {
+    "aperture_mm": -0.9050156894572225,
+    "brow_dy_mm": -4.062714609910534
+   },
+   "R": {
+    "aperture_mm": -0.8377943490205375,
+    "brow_dy_mm": -4.261250434013542
+   }
+  },
+  "snarl": {
+   "L": {
+    "aperture_mm": 4.966183651542694,
+    "brow_dy_mm": -2.219779579740677
+   },
+   "R": {
+    "aperture_mm": 4.866199072454891,
+    "brow_dy_mm": -2.3368009963873337
+   }
+  },
+  "corners_down": {
+   "L": {
+    "aperture_mm": 6.191851383406583,
+    "brow_dy_mm": -0.14789129422609903
+   },
+   "R": {
+    "aperture_mm": 6.1713411491896855,
+    "brow_dy_mm": -0.46348820105046595
+   }
+  }
+ },
+ "controls": {
+  "blink_L": {
+   "L": {
+    "aperture_mm": 0.15,
+    "brow_dy_mm": 0.105
+   },
+   "R": {
+    "aperture_mm": 7.263,
+    "brow_dy_mm": 0.001
+   }
+  },
+  "upper_lid_down_L": {
+   "L": {
+    "aperture_mm": 1.986,
+    "brow_dy_mm": 0.067
+   },
+   "R": {
+    "aperture_mm": 7.263,
+    "brow_dy_mm": 0.001
+   }
+  },
+  "upper_lid_raise_L": {
+   "L": {
+    "aperture_mm": 8.615,
+    "brow_dy_mm": -0.014
+   },
+   "R": {
+    "aperture_mm": 7.263,
+    "brow_dy_mm": -0.0
+   }
+  },
+  "lower_lid_raise_L": {
+   "L": {
+    "aperture_mm": 5.808,
+    "brow_dy_mm": 0.015
+   },
+   "R": {
+    "aperture_mm": 7.263,
+    "brow_dy_mm": -0.0
+   }
+  },
+  "brow_raise_L": {
+   "L": {
+    "aperture_mm": 7.257,
+    "brow_dy_mm": 6.305
+   },
+   "R": {
+    "aperture_mm": 7.263,
+    "brow_dy_mm": 0.015
+   }
+  },
+  "brow_lower_L": {
+   "L": {
+    "aperture_mm": 7.213,
+    "brow_dy_mm": -3.116
+   },
+   "R": {
+    "aperture_mm": 7.263,
+    "brow_dy_mm": -0.011
+   }
+  },
+  "blink_R": {
+   "L": {
+    "aperture_mm": 7.236,
+    "brow_dy_mm": 0.001
+   },
+   "R": {
+    "aperture_mm": 0.15,
+    "brow_dy_mm": 0.115
+   }
+  },
+  "upper_lid_down_R": {
+   "L": {
+    "aperture_mm": 7.236,
+    "brow_dy_mm": 0.001
+   },
+   "R": {
+    "aperture_mm": 2.294,
+    "brow_dy_mm": 0.073
+   }
+  },
+  "upper_lid_raise_R": {
+   "L": {
+    "aperture_mm": 7.236,
+    "brow_dy_mm": -0.0
+   },
+   "R": {
+    "aperture_mm": 8.642,
+    "brow_dy_mm": -0.014
+   }
+  },
+  "lower_lid_raise_R": {
+   "L": {
+    "aperture_mm": 7.236,
+    "brow_dy_mm": -0.001
+   },
+   "R": {
+    "aperture_mm": 5.726,
+    "brow_dy_mm": 0.015
+   }
+  },
+  "brow_raise_R": {
+   "L": {
+    "aperture_mm": 7.236,
+    "brow_dy_mm": 0.021
+   },
+   "R": {
+    "aperture_mm": 7.307,
+    "brow_dy_mm": 6.3
+   }
+  },
+  "brow_lower_R": {
+   "L": {
+    "aperture_mm": 7.236,
+    "brow_dy_mm": -0.01
+   },
+   "R": {
+    "aperture_mm": 7.257,
+    "brow_dy_mm": -3.122
+   }
+  },
+  "pupil_dilate": {
+   "L": {
+    "aperture_mm": 7.236,
+    "brow_dy_mm": 0.0
+   },
+   "R": {
+    "aperture_mm": 7.263,
+    "brow_dy_mm": 0.0
+   }
+  },
+  "smile": {
+   "L": {
+    "aperture_mm": 7.236,
+    "brow_dy_mm": 0.0
+   },
+   "R": {
+    "aperture_mm": 7.263,
+    "brow_dy_mm": 0.0
+   }
+  }
+ }
+}
