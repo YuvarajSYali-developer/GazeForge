@@ -1,0 +1,44 @@
+{
+ "id": "02",
+ "name": "arjun",
+ "identity": "male_middle_eastern",
+ "skin_srgb": [
+  176,
+  122,
+  92
+ ],
+ "undertone": "olive",
+ "redness": 0.7,
+ "freckles": 0.0,
+ "beard": 0.9,
+ "age": 0.35,
+ "eye": "brown",
+ "hair_srgb": [
+  24,
+  19,
+  17
+ ],
+ "brow_density": 1.0,
+ "seed": 22,
+ "eye_geometry_mm": {
+  "L": {
+   "r_iris_mm": 5.325343324774862,
+   "r_pupil_mm": 2.6955398197908726
+  },
+  "R": {
+   "r_iris_mm": 5.336839424627461,
+   "r_pupil_mm": 2.7052650730627117
+  }
+ },
+ "skin_res": 4096,
+ "eye_res": 2048,
+ "udim_tiles": {
+  "1001": "skin",
+  "1002": "left eye interior (iris/sclera/pupil)",
+  "1003": "left cornea (no texture: refracting cornea shader)",
+  "1004": "right eye interior",
+  "1005": "right cornea (no texture: refracting cornea shader)",
+  "1006": "teeth+gums",
+  "1007": "tongue"
+ }
+}
