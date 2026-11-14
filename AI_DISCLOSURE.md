@@ -23,6 +23,9 @@ requirement to disclose AI use, this file states how AI tools were used.
 ## What the author did
 
 * Chose the track, the approach and the scope.
+* Provided the logic and specifications that the code implements: detailed written specifications of the modules,
+  behaviours, acceptance checks and rules (for example, the GazeForge V3 master specification and the V2-protection
+  rules). The AI wrote code to these specifications, and the author reviewed it.
 * Supplied the inputs: the GNM model file, the organisers' evaluation criteria and the submission template.
 * Made the design decisions: GNM over FLAME, procedural textures, which features to build, and what to submit.
 * Reviewed the outputs and approved the final submission.
