@@ -27,6 +27,7 @@ GNM's UV space, and every eye, eyelid and brow movement is driven through GNM's 
 | 6 | `.blend` that loads the head model and animates an expression on the Timeline (eyelids, iris, eyebrows) | [`GazeForge_GNM_Timeline.blend`](GazeForge_GNM_Timeline.blend): open it and press **Space**. It has 10 named markers. |
 | + | Scene used by the scripts | [`GazeForge_GNM.blend`](GazeForge_GNM.blend) |
 | + | Demo, slides, readme | [`demo/`](demo), [`docs/`](docs), this file |
+| + | AI disclosure | [`AI_DISCLOSURE.md`](AI_DISCLOSURE.md) |
 
 ## Run it
 
