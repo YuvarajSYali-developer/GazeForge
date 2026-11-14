@@ -1,0 +1,44 @@
+{
+ "id": "06",
+ "name": "erik",
+ "identity": "male_white",
+ "skin_srgb": [
+  222,
+  178,
+  154
+ ],
+ "undertone": "pink",
+ "redness": 1.3,
+ "freckles": 0.25,
+ "beard": 0.6,
+ "age": 0.55,
+ "eye": "green",
+ "hair_srgb": [
+  92,
+  66,
+  44
+ ],
+ "brow_density": 0.95,
+ "seed": 66,
+ "eye_geometry_mm": {
+  "L": {
+   "r_iris_mm": 5.325343324774862,
+   "r_pupil_mm": 2.6955398197908726
+  },
+  "R": {
+   "r_iris_mm": 5.336839424627461,
+   "r_pupil_mm": 2.7052650730627117
+  }
+ },
+ "skin_res": 4096,
+ "eye_res": 2048,
+ "udim_tiles": {
+  "1001": "skin",
+  "1002": "left eye interior (iris/sclera/pupil)",
+  "1003": "left cornea (no texture: refracting cornea shader)",
+  "1004": "right eye interior",
+  "1005": "right cornea (no texture: refracting cornea shader)",
+  "1006": "teeth+gums",
+  "1007": "tongue"
+ }
+}
